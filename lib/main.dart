@@ -193,3 +193,52 @@ class BuyNowPage extends StatelessWidget {
     PaymentMethodButton(imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Old_Visa_Logo.svg/545px-Old_Visa_Logo.svg.png'),
     ],
     ),
+      SizedBox(height: 16),
+      DropdownButton<String>(
+        items: ['Bkash', 'Rocket','Nagad','Amex','Visa']
+            .map((String value) => DropdownMenuItem<String>(
+          value: value,
+          child: Text(value),
+        ))
+            .toList(),
+        onChanged: (String? value) {
+          // Handle dropdown value change
+        },
+        hint: Text('Select an option'),
+      ),
+      SizedBox(height: 32),
+      ElevatedButton(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        child: Text('Go Back'),
+      ),
+    ],
+    ),
+        ),
+    );
+  }
+}
+class PaymentMethodButton extends StatelessWidget {
+  final String imageUrl;
+
+  const PaymentMethodButton({Key? key, required this.imageUrl})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 50,
+      width: 50,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: NetworkImage(imageUrl),
+          fit: BoxFit.cover,
+        ),
+        borderRadius: BorderRadius.circular(9),
+      ),
+    );
+  }
+}
+
+
