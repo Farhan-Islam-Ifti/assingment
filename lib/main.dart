@@ -235,7 +235,7 @@ class PaymentMethodButton extends StatelessWidget {
           image: NetworkImage(imageUrl),
           fit: BoxFit.cover,
         ),
-        borderRadius: BorderRadius.circular(9g),
+        borderRadius: BorderRadius.circular(9),
       ),
     );
   }
