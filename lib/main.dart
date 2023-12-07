@@ -166,3 +166,30 @@ class ProductDetailsPage extends StatelessWidget {
     );
   }
 }
+class BuyNowPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('Buy Now'),
+        ),
+        body: Padding(
+        padding: const EdgeInsets.all(16.0),
+    child: Column(
+    crossAxisAlignment: CrossAxisAlignment.stretch,
+    children: [
+    Text(
+    'Choose Payment Method',
+    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+    ),
+    SizedBox(height: 16),
+    Row(
+    mainAxisAlignment: MainAxisAlignment.spaceAround,
+    children: [
+    PaymentMethodButton(imageUrl: 'https://vectorseek.com/wp-content/uploads/2021/02/bKash-Logo-Vector.jpg'),
+    PaymentMethodButton(imageUrl: 'https://seeklogo.com/images/D/dutch-bangla-rocket-logo-B4D1CC458D-seeklogo.com.png'),
+    PaymentMethodButton(imageUrl: 'https://download.logo.wine/logo/Nagad/Nagad-Logo.wine.png'),
+    PaymentMethodButton(imageUrl: 'https://w7.pngwing.com/pngs/58/14/png-transparent-amex-card-credit-logo-logos-logos-and-brands-icon.png'),
+    PaymentMethodButton(imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Old_Visa_Logo.svg/545px-Old_Visa_Logo.svg.png'),
+    ],
+    ),
